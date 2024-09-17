@@ -1,0 +1,35 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>Crop Purchase Form</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="content">
+    <form class="form-group">
+      <p>Name</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="saleForm.name" name="name" placeholder="Name"/>
+      </mat-form-field>
+
+      <p>Description</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="saleForm.description" name="description" placeholder="Description"/>
+      </mat-form-field>
+
+      <p>Unit Price</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="saleForm.unitPrice" name="unitPrice" placeholder="Unit price"/>
+      </mat-form-field>
+
+      <p>Quantity</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="saleForm.quantity" name="quantity" placeholder="Quantity"/>
+      </mat-form-field>
+
+      <p>Image link</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="saleForm.imageUrl" name="imageUrl" placeholder="Image link"/>
+      </mat-form-field>
+      <button mat-button (click)="onSubmit()">Save</button>
+    </form>
+  </mat-card-content>
+</mat-card>

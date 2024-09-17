@@ -1,0 +1,43 @@
+.order-card {
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 15px;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 3px 5px;
+}
+
+:host mat-card-header {
+  margin: 0;
+  padding: 3px 0 0 3px;
+  border:0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-info {
+  padding: 10px 20px;
+  line-height: 15px;
+}
+
+.farmer-info {
+  padding: 10px 20px;
+  line-height: 15px;
+}
+
+.product-photo {
+  width: 80%;
+  object-fit: cover;
+}
+
+:host .button-color{
+  color: white;
+  background-color: #3EAF2C;
+}

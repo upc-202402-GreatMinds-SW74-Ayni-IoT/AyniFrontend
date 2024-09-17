@@ -1,0 +1,255 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Juan",
+      "email": "Juan@gmail.com",
+      "password": "Juan123",
+      "rol": "farmer",
+      "photo": "https://media.istockphoto.com/id/1199175531/photo/outdoor-portrait-of-smiling-spanish-man-in-mid-20s.jpg?s=170667a&w=0&k=20&c=6mDr4Fkq-ECwldusAzBRG21qenqKvtqLVXCEwHguGGY="
+    },
+    {
+      "id": 2,
+      "username": "Jose",
+      "email": "Jose@gmail.com",
+      "password": "Jose123",
+      "rol": "merchant",
+      "photo": "https://img.freepik.com/fotos-premium/chico-adolescente-atractivo-parque_58409-13244.jpg?w=2000"
+    },
+    {
+      "id": 3,
+      "username": "Hana",
+      "email": "Hana@gmail.com",
+      "password": "Hana123",
+      "rol": "merchant",
+      "photo": "https://img.freepik.com/foto-gratis/mujer-hermosa-joven-mirando-camara-chica-moda-verano-casual-camiseta-blanca-pantalones-cortos-hembra-positiva-muestra-emociones-faciales-modelo-divertido-aislado-amarillo_158538-15796.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Papas",
+      "description": "Papas haradas durante bastante tiempo",
+      "distance": "1 metro",
+      "depth": "2 metros",
+      "weather": "Seco",
+      "groundType": "Arenoso",
+      "season": "Verano",
+      "unitPrice": 1.5,
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5"
+    },
+    {
+      "id": 2,
+      "name": "Cerezos",
+      "description": "Cereza recontra roja",
+      "distance": "1 metro",
+      "depth": "2 metros",
+      "weather": "Seco",
+      "groundType": "Arenoso",
+      "season": "Verano",
+      "unitPrice": 2.5,
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/f481402c-de81-4d95-a694-82fab273adfa"
+    },
+    {
+      "id": 3,
+      "name": "Arroz",
+      "description": "Arroz bien plantado",
+      "distance": "1 metro",
+      "depth": "2 metros",
+      "weather": "Seco",
+      "groundType": "Arenoso",
+      "season": "Verano",
+      "unitPrice": 1.5,
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/19f2c725-e39b-4319-84c3-efed243898dd"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Harar la tierra",
+      "description": "Harar la tierra description",
+      "start_date": "2020-03-09",
+      "finish_date": "2020-03-27"
+    },
+    {
+      "name": "Harar la tierra",
+      "description": "Harar la tierra description",
+      "start_date": "2020-03-09",
+      "finish_date": "2020-03-27"
+    },
+    {
+      "name": "Harar la tierra",
+      "description": "Harar la tierra description",
+      "start_date": "2020-03-09",
+      "finish_date": "2020-03-27"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "saleId": 1,
+      "orderedBy": 3,
+      "acceptedBy": 1,
+      "description": "ola",
+      "quantity": 20,
+      "status": "Finalized",
+      "orderedDate": "2023-05-09",
+      "totalPrice": 30,
+      "paymentMethod": "mastercard"
+    },
+    {
+      "id": 2,
+      "saleId": 2,
+      "orderedBy": 2,
+      "acceptedBy": 1,
+      "description": "wasaaa",
+      "quantity": 20,
+      "status": "Finalized",
+      "orderedDate": "2023-05-09",
+      "totalPrice": 30,
+      "paymentMethod": "mastercard"
+    },
+    {
+      "id": 3,
+      "saleId": 1,
+      "orderedBy": 2,
+      "acceptedBy": 1,
+      "description": "wasaaa",
+      "quantity": 20,
+      "status": "Finalized",
+      "orderedDate": "2023-05-09",
+      "totalPrice": 30,
+      "paymentMethod": "mastercard"
+    }
+  ],
+  "crops": [
+    {
+      "undergrowth": true,
+      "fertilize": false,
+      "oxygenate": true,
+      "lines": false,
+      "holes": true,
+      "watered": "3",
+      "pestcleaning": "5",
+      "id": 1
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "type": "ingreso",
+      "costName": "Manzanas",
+      "date": "2019-07-10",
+      "description": "Se vendió 300 paquetes de manzanas a Exportadora de frutas",
+      "price": 250,
+      "quantity": "300 paquetes"
+    },
+    {
+      "id": 2,
+      "type": "ingreso",
+      "costName": "Zanahorias",
+      "date": "2019-11-15",
+      "description": "Se vendió 200 paquetes de zanahorias a Juan Perez",
+      "price": 200,
+      "quantity": "200 paquetes de zanahorias"
+    },
+    {
+      "id": 3,
+      "type": "ingreso",
+      "costName": "Papayas",
+      "date": "2020-01-15",
+      "description": "Se vendió 150 paquetes de papayas a Distribuidora Tropical",
+      "price": 300,
+      "quantity": "150 paquetes"
+    },
+    {
+      "id": 4,
+      "type": "ingreso",
+      "costName": "Espinacas",
+      "date": "2020-02-20",
+      "description": "Se vendió 100 paquetes de espinacas a Supermercado Verde",
+      "price": 150,
+      "quantity": "100 paquetes de espinacas"
+    },
+    {
+      "id": 5,
+      "type": "ingreso",
+      "costName": "Plátanos",
+      "date": "2020-03-25",
+      "description": "Se vendió 400 paquetes de plátanos a Comercializadora Frutal",
+      "price": 180,
+      "quantity": "400 paquetes"
+    },
+    {
+      "id": 6,
+      "type": "gasto",
+      "costName": "Pago de agua",
+      "date": "2019-10-10",
+      "description": "se pago el agua del mes de octubre",
+      "price": 200,
+      "quantity": "1"
+    },
+    {
+      "id": 7,
+      "type": "gasto",
+      "costName": "Pago de cajas contenedoras",
+      "date": "2019-11-10",
+      "description": "se compraron cajas contenedoras para la producción de zanahorias",
+      "price": 500,
+      "quantity": "45 cajas contenedoras"
+    },
+    {
+      "id": 8,
+      "type": "gasto",
+      "costName": "Comida para el personal",
+      "date": "2019-12-05",
+      "description": "Compra de alimentos para el personal de la granja",
+      "price": 300,
+      "quantity": "1 compra"
+    },
+    {
+      "id": 9,
+      "type": "gasto",
+      "costName": "Pimientos",
+      "date": "2020-04-30",
+      "description": "Se vendió 250 paquetes de pimientos a Mercado Fresco",
+      "price": 220,
+      "quantity": "250 paquetes de pimientos"
+    },
+    {
+      "id": 10,
+      "type": "gasto",
+      "costName": "Camote",
+      "date": "2023-09-20",
+      "description": "Venta de 30 kg de camote",
+      "price": 300,
+      "quantity": "30"
+    }
+  ],
+  "rates": [
+    {
+      "rate": 2,
+      "date": "2023-10-25T07:33:34.668Z",
+      "productId": 2,
+      "userId": 2,
+      "id": 1
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "name": "Papas",
+      "description": "Papas haradas durante bastante tiempo",
+      "unitPrice": 1.5,
+      "quantity": 20,
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5"
+    },
+    {
+      "id": 2,
+      "name": "Camotes",
+      "description": "Ricos camotes",
+      "unitPrice": "1.50",
+      "quantity": "30",
+      "imageUrl": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQTKPfhD7KjTxh3WxlIC7zzKlnmTR1CaNt29U9M76o8WdjJ77UZvo1fKVSciIiuRybj"
+    }
+  ]
+}

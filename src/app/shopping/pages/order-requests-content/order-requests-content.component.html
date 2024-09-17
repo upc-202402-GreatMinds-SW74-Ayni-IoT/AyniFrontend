@@ -1,0 +1,49 @@
+<app-farmer-navigation></app-farmer-navigation>
+<div class="container" xmlns="http://www.w3.org/1999/html">
+  <button mat-button color="primary" (click)="addNewSale()">
+    <p><mat-icon>add</mat-icon>Add products</p>
+  </button>
+  <h1>My orders</h1>
+  <div class="orders">
+    <ng-container *ngFor="let order of pagedOrders">
+      <mat-card class="order-card">
+        <mat-card-header>
+          <p>Date: {{order.orderedDate}}</p>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="user-info">
+            <img alt="{{getProduct(order.saleId)?.name}}" class="user-photo" src="{{getProduct(order.saleId)?.imageUrl}}">
+          </div>
+          <div class="product-info">
+            <p>Product: {{getProduct(order.saleId)?.name}}</p>
+            <p>Unit Price: S/. {{getProduct(order.saleId)?.unitPrice}}</p>
+            <p>Quantity: {{order.quantity}} Kg</p>
+            <p>Total Price: S/. {{order.totalPrice}}</p>
+            <div class="buttons">
+              <button class="button-color" mat-raised-button (click)="acceptOrder(order.id)">Accept</button>
+              <button color="warn" (click)="deleteOrder(order.id)" mat-raised-button>Decline</button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </div>
+
+
+  <div class="navigation-buttons">
+  <button mat-raised-button (click)="navigateToPreviousView()"><mat-icon>keyboard_arrow_left></mat-icon></button>
+
+  <div class="pagination-buttons">
+    <button mat-raised-button  (click)="goToPage(pageIndex - 1)" [disabled]="pageIndex === 0" ><mat-icon>keyboard_arrow_left></mat-icon></button>
+    <button mat-raised-button  *ngFor="let pageNumber of pageNumbers" (click)="goToPage(pageNumber)" [class.active]="pageNumber === pageIndex">
+      {{ pageNumber+1 }}
+    </button>
+    <button mat-raised-button (click)="goToPage(pageIndex + 1)" [disabled]="pageIndex === pageNumbers.length - 1"><mat-icon>keyboard_arrow_right</mat-icon></button>
+  </div>
+    <button disabled mat-raised-button><mat-icon>keyboard_arrow_right</mat-icon></button>
+
+  </div>
+
+
+
+</div>

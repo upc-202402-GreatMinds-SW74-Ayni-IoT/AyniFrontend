@@ -1,0 +1,24 @@
+<mat-card class="order-card">
+  <mat-card-header>
+    <p>Date: {{order.orderedDate}}</p>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="product-info">
+      <img alt="{{getProduct(order.saleId)?.name}}" class="product-photo" width="100%" src="{{getProduct(order.saleId)?.imageUrl}}">
+    </div>
+    <div class="product-info">
+      <p>Product: {{getProduct(order.saleId)?.name}}</p>
+      <p>Description: {{getProduct(order.saleId)?.description}}</p>
+      <p>Status: {{order.status}}</p>
+      <p>Unit Price: S/. {{getProduct(order.saleId)?.unitPrice}}</p>
+      <p>Quantity: {{order.quantity}} Kg</p>
+      <p>Total Price: S/. {{order.totalPrice}}</p>
+    </div>
+    <div class="farmer-info">
+    </div>
+    <div class="buttons">
+      <button color="button-color" (click)="viewOrderDetails(order.id)" mat-raised-button>View status</button>
+      <button class="warn" mat-raised-button (click)="openDialog(); deleteOrder(order.id)">Cancel</button>
+    </div>
+  </mat-card-content>
+</mat-card>

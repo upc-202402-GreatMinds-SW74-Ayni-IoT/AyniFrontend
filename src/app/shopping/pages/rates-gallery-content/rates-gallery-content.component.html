@@ -1,0 +1,17 @@
+<app-merchant-navigation></app-merchant-navigation>
+<div class="container">
+  <h1>Rates</h1>
+  <div class="orders">
+    <ng-container *ngFor="let order of pagedList">
+      <app-rate-card-content [order]="order" [products]="products"></app-rate-card-content>
+    </ng-container>
+  </div>
+  <div>
+    <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   [hidePageSize]=true
+                   (page)="OnPageChange($event)">
+    </mat-paginator>
+  </div>
+</div>

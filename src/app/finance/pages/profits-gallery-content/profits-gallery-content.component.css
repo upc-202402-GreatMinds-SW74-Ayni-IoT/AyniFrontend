@@ -1,0 +1,46 @@
+.page-background {
+  background: linear-gradient(to bottom, #2AAF87, #48D4AA, #ABEDD9, #D0F3CB, white);
+  background-size: cover;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+  width:80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(2,  minmax(150px, 1fr));
+  gap: 20px;
+}
+
+mat-card{
+  min-height: 230px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.page-background {
+  background-color: #effffe;
+}
+
+.buttons{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.color{
+  background: #3EAF2C !important;
+  color: white !important;
+}
+
+
+
+
+
+
+
+

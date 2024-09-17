@@ -1,0 +1,59 @@
+<div class="popup-container">
+  <div class="popup-content m-6">
+    <div class="popup-header mb-3">
+      <h2 class="text-white">Send Messages</h2>
+    </div>
+
+    <form action="javascript:void(0)" (submit)="sendMessage()" class="mx-3" [formGroup]="form">
+      <div class="mb-3">
+        <mat-form-field>
+          <mat-label>To name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="to_name"
+            id="to_name"
+            formControlName="to_name"
+            required>
+        </mat-form-field>
+      </div>
+      <div class="mb-3">
+        <mat-form-field>
+          <mat-label>From name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="from_name"
+            id="from_name"
+            formControlName="from_name"
+            required>
+        </mat-form-field>
+      </div>
+      <div class="mb-3">
+        <mat-form-field>
+          <mat-label>From email</mat-label>
+          <input
+            matInput
+            type="text"
+            name="from_email"
+            id="from_email"
+            formControlName="from_email"
+            required>
+        </mat-form-field>
+      </div>
+      <div class="mb-3">
+        <mat-form-field>
+          <mat-label>Message</mat-label>
+          <input
+            matInput
+            type="text"
+            name="message"
+            id="message"
+            formControlName="message"
+            required>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<app-farmer-navigation></app-farmer-navigation>
+<div class="content">
+  <h1 class="content-title">Available products</h1>
+  <button mat-button color="primary" (click)="addNewProduct()">
+    <p><mat-icon>add</mat-icon>New product</p>
+  </button>
+  <mat-grid-list class="grid-list" [cols]="breakpoint" rowHeight="250px" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let product of pagedList" class="grid-title">
+      <app-product-card-content [product]="product" (click)="navigateToProductDetails(product.id)"></app-product-card-content>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-paginator [length]="length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 [hidePageSize]=true
+                 (page)="OnPageChange($event)">
+  </mat-paginator>
+</div>

@@ -1,0 +1,16 @@
+<app-farmer-navigation></app-farmer-navigation>
+<div class="page-background">
+  <div class="container">
+    <mat-horizontal-stepper>
+      <mat-step label="Step 1">
+        <crops-step1-card-content (formCompleted1)="handleFormCompleted1($event)"></crops-step1-card-content>
+      </mat-step>
+      <mat-step label="Step 2">
+        <crops-step2-card-content (formCompleted2)="handleFormCompleted2($event)"></crops-step2-card-content>
+      </mat-step>
+      <mat-step label="Step 3">
+        <crops-step3-card-content [formData]="combinedFormData"></crops-step3-card-content>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

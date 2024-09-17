@@ -1,0 +1,55 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>Form for Products</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="content">
+    <form class="form-group">
+      <p>Name</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.name" name="name" placeholder="Name"/>
+      </mat-form-field>
+
+      <p>Description</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.description" name="description" placeholder="Description"/>
+      </mat-form-field>
+
+      <p>Separation distance</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.recommendedCultivationDistance" name="distance" placeholder="Separation distance"/>
+      </mat-form-field>
+
+      <p>Planting depth</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.recommendedCultivationDepth" name="depth" placeholder="Planting depth"/>
+      </mat-form-field>
+
+      <p>Weather</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.recommendedGrowingClimate" name="weather" placeholder="Weather"/>
+      </mat-form-field>
+
+      <p>Ground type</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.recommendedSoilType" name="groundType" placeholder="Ground type"/>
+      </mat-form-field>
+
+      <p>Season</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.recommendedGrowingSeason" name="season" placeholder="Season"/>
+      </mat-form-field>
+
+      <p>Unit Price</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.unitPrice" name="unitPrice" placeholder="Unit price"/>
+      </mat-form-field>
+
+      <p>Image link</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="productForm.imageUrl" name="imageUrl" placeholder="Image link"/>
+      </mat-form-field>
+      <button mat-button (click)="onSubmit()">Save</button>
+    </form>
+  </mat-card-content>
+</mat-card>

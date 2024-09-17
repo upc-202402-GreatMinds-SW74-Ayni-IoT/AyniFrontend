@@ -1,0 +1,16 @@
+<app-merchant-navigation></app-merchant-navigation>
+<div class="page-background">
+  <div class="container">
+    <mat-horizontal-stepper>
+      <mat-step label="Step 1">
+        <sales-step1-card-content (formCompleted1)="handleFormCompleted1($event)"></sales-step1-card-content>
+      </mat-step>
+      <mat-step label="Step 2">
+        <sales-step2-card-content></sales-step2-card-content>
+      </mat-step>
+      <mat-step label="Step 3">
+        <sales-step3-card-content [formData]="combinedFormData"></sales-step3-card-content>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

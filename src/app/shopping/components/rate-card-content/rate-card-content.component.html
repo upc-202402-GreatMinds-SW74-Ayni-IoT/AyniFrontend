@@ -1,0 +1,30 @@
+<div class="products-information">
+<mat-card class="product">
+  <img class="img" src="{{getProduct(order.saleId)?.imageUrl}}" alt="">
+  <div class="buttons">
+    <button mat-raised-button class="button" color="">{{getProduct(order.saleId)?.name}}</button>
+  </div>
+</mat-card>
+
+<mat-card class="product-details">
+  <mat-card-content>
+    <p>Product: {{getProduct(order.saleId)?.name}}</p>
+    <p>Description: {{getProduct(order.saleId)?.description}}</p>
+    <p>Quantity: {{order.quantity}} Kg</p>
+    <p>Total Price: S/. {{order.totalPrice}}</p>
+
+    <div class="rating">
+      <mat-icon
+        *ngFor="let star of [1, 2, 3, 4, 5]"
+        class="star"
+        (click)="setRating(star)"
+        [ngClass]="{'selected': star <= selectedRating}"
+      >star</mat-icon>
+    </div>
+
+      <div class="buttons">
+      <button mat-raised-button class="button" color="primary" (click)="createReview()">Send</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>

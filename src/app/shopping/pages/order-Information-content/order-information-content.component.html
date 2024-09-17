@@ -1,0 +1,45 @@
+<app-merchant-navigation></app-merchant-navigation>
+<div class="container">
+<mat-card class="order-card">
+  <mat-card-header>
+    <p>Date: {{order.orderedDate}}</p>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="product-info">
+      <img width="30%" alt="{{product.name}}" class="product-photo" src="{{sale.imageUrl}}">
+    </div>
+    <div class="product-info">
+      <p>Product: {{sale.name}}</p>
+      <p>Description: {{sale.description}}</p>
+      <p>Status: {{order.status}}</p>
+      <p>Unit Price: S/. {{sale.unitPrice}}</p>
+      <p>Quantity: {{order.quantity}} Kg</p>
+      <p>Total Price: S/. {{order.totalPrice}}</p>
+    </div>
+    <div class="farmer-info">
+    </div>
+    <div class="buttons">
+      <button class="warn" mat-raised-button (click)="openDialog(); deleteOrder(order.id)">Cancel</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>
+<div class="progress-bar-container">
+  <mat-progress-bar
+    mode="determinate"
+    [value]="calculateProgress(order.status)"
+  ></mat-progress-bar>
+
+  <div class="status-description" [ngClass]="{'pending': order.status === 'pending', 'finalized': order.status === 'finalized', 'qualified': order.status === 'qualified'}">
+    <p>
+      <span *ngIf="order.status === 'pending'">Purchase pending.</span>
+      <span *ngIf="order.status === 'finalized'">Purchase success.</span>
+      <span *ngIf="order.status === 'qualified'">Purchase rated.</span>
+    </p>
+  </div>
+  <button mat-icon-button (click)="navigateBack()">
+      <mat-icon aria-label="Volver">arrow_back</mat-icon>
+  </button>
+</div>
+
+

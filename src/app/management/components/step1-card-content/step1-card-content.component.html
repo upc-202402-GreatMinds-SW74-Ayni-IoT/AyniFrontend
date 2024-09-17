@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-subtitle>
+      Remember that the type of soil you are planning to plant in must be suitable
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <h5>Crop name</h5>
+      <input matInput [(ngModel)]="cropform1.name" name="name" placeholder="Write the name here">
+    </mat-form-field>
+    <div class="checkbox-group">
+      <mat-checkbox [(ngModel)]="cropform1.pickUpWeed" name="pickUpWeed">Get rid of weeds</mat-checkbox>
+      <mat-checkbox [(ngModel)]="cropform1.fertilizeCrop" name="fertilizeCrop">Fertilize the land</mat-checkbox>
+      <mat-checkbox [(ngModel)]="cropform1.oxygenateCrop" name="oxygenateCrop">Oxygenate the land</mat-checkbox>
+      <mat-checkbox [(ngModel)]="cropform1.makeCropLine" name="makeCropLine">Make the crop lines</mat-checkbox>
+      <mat-checkbox [(ngModel)]="cropform1.makeCropHole" name="makeCropHole">Make the holes</mat-checkbox>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <button mat-button matStepperNext (click)="saveData()">Next</button>
+  </mat-card-footer>
+</mat-card>

@@ -1,0 +1,34 @@
+<app-farmer-navigation></app-farmer-navigation>
+<div class="page-background">
+  <h1>My Expenses</h1>
+<div class="container">
+  <div *ngFor="let costo of costos">
+    <mat-card class="Cost">
+      <mat-card-header>
+        <mat-card-title>{{ costo.costName }}</mat-card-title>
+        <mat-card-subtitle>Category: {{ costo.transactionType }}</mat-card-subtitle>
+        <mat-card-subtitle>Amount: S/{{ costo.price }}</mat-card-subtitle>
+        <mat-card-subtitle>Quantity: {{ costo.quantity }}</mat-card-subtitle>
+        <mat-card-subtitle>Date: {{ costo.date }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ costo.description }}</p>
+      </mat-card-content>
+      <mat-card-actions class="buttons">
+        <button mat-raised-button class="color">EDIT</button>
+        <button mat-raised-button color="warn" (click)="deleteCost(costo.id)">DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="openDialog()">Add</button>
+  </div>
+</div>
+
+
+
+
+
+
+

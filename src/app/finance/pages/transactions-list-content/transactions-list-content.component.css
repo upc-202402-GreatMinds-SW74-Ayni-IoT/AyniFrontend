@@ -1,0 +1,46 @@
+.page-background {
+  background: linear-gradient(to bottom, #2AAF87, #48D4AA, #ABEDD9, #D0F3CB, white);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  gap:30px;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.container{
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 10% !important;
+}
+
+::ng-deep .mat-sort-header-container {
+  display:flex;
+  justify-content:center;
+}
+
+th,
+td {
+  padding: 0.70rem;
+  vertical-align: center;
+  text-align: center;
+  horiz-align: center;
+}
+
+th {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #b2f5a0;
+}
+
+.buttons{
+  display: flex;
+  gap:10px;
+}

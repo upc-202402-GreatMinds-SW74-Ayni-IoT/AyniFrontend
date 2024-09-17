@@ -1,0 +1,33 @@
+<app-farmer-navigation></app-farmer-navigation>
+<div class="page-background">
+  <h1>My Profits</h1>
+  <div class="container">
+  <div *ngFor="let profit of profits">
+    <mat-card class="profit">
+      <mat-card-header>
+        <mat-card-title>{{ profit.costName }}</mat-card-title>
+        <p></p>
+        <mat-card-subtitle>Category: {{ profit.transactionType }}</mat-card-subtitle>
+        <p></p>
+        <mat-card-subtitle>Amount: S/{{ profit.price }}</mat-card-subtitle>
+        <p></p>
+        <mat-card-subtitle>Quantity: {{ profit.quantity }}</mat-card-subtitle>
+        <p></p>
+        <mat-card-subtitle>Date: {{ profit.date }}</mat-card-subtitle>
+        <p></p>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ profit.description }}</p>
+        <p></p>
+      </mat-card-content>
+      <mat-card-actions class="buttons">
+        <button mat-raised-button class="color">EDIT</button>
+        <button mat-raised-button color="warn"  (click)="deleteProfit(profit.id)">DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="openDialog()">Add</button>
+  </div>
+</div>

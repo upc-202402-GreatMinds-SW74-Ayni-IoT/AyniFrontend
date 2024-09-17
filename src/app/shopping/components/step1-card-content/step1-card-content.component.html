@@ -1,0 +1,25 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>Purchase From</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="form-group">
+      <mat-form-field>
+        <input matInput type="number" [(ngModel)]="saleform1.quantity" name="quantity" placeholder="Quantity" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Purchase Date</mat-label>
+        <input matInput [(ngModel)]="saleform1.orderedDate" name="date" [matDatepicker]="picker"/>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [(ngModel)]="saleform1.paymentMethod" name="method" placeholder="Payment method">
+      </mat-form-field>
+      <button mat-button (click)="onSubmit()" matStepperNext>Next</button>
+    </form>
+  </mat-card-content>
+</mat-card>

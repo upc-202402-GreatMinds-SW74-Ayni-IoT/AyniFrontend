@@ -1,0 +1,90 @@
+
+.container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap:20px;
+}
+
+.orders {
+  width:70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(2,  minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.order-card {
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 3px 5px;
+}
+:host mat-card-header {
+  margin: 0;
+  padding: 3px 0 0 3px;
+  border:0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+}
+
+.product-info {
+  padding: 10px 20px;
+  line-height: 15px;
+
+}
+
+.user-photo {
+  width: 140px;
+  height: 80px;
+  object-fit: cover;
+}
+
+:host .button-color{
+  color: white;
+  background-color: #3EAF2C;
+}
+.pagination-buttons {
+  margin: 20px 0;
+}
+
+.pagination-buttons button {
+  color: black;
+  margin: 0 5px;
+  transition: background-color 0.1s ease, transform 0.2s ease;
+}
+
+.pagination-buttons button.active {
+  background-color: #425afa;
+  color: white;
+}
+
+.navigation-buttons{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+

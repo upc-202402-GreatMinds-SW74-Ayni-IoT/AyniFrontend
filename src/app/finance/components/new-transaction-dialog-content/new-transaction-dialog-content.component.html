@@ -1,0 +1,59 @@
+<h1 mat-dialog-title> Agrega el costo</h1>
+<div mat-dialog-content>
+  <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo</mat-label>
+      <mat-select formControlName="transactionType" required>
+        <mat-option value="Cost">Costs</mat-option>
+        <mat-option value="Profit">Profits</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="costName" placeholder="Enter a name">
+      </mat-form-field>
+    </p>
+
+    <h2>Details</h2>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input formControlName="description" matInput placeholder="Enter a description">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Amount</mat-label>
+        <input  formControlName="price" matInput type="Number" placeholder="Enter the amount">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Quantity</mat-label>
+        <input formControlName="quantity" matInput placeholder="Enter the quantity">
+      </mat-form-field>
+    </p>
+
+    <h2>
+      Choose the date:
+    </h2>
+    <p>
+
+      <mat-form-field>
+        <mat-label>Date:</mat-label>
+        <input formControlName="date" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    </p>
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+      <button mat-raised-button class="boton-personalizado" type="submit" mat-dialog-close>Save</button>
+    </div>
+  </form>
+</div>
