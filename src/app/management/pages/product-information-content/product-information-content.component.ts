@@ -1,18 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {Product} from "../../model/product";
-import {ActivatedRoute} from "@angular/router";
-import {ProductsService} from "../../services/products.service";
-import {CropdataService} from "../../services/cropdata.service";
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../../model/product';
+import { ActivatedRoute } from '@angular/router';
+import { ProductsService } from '../../services/products.service';
+import { CropdataService } from '../../services/cropdata.service';
 
 @Component({
   selector: 'app-product-information-content',
   templateUrl: './product-information-content.component.html',
-  styleUrls: ['./product-information-content.component.css']
+  styleUrls: ['./product-information-content.component.css'],
 })
-export class ProductInformationContentComponent implements OnInit{
-
+export class ProductInformationContentComponent implements OnInit {
   product: Product = new Product();
-  crops="/crops";
+  crops = '/crops';
   form: any = {
     pickUpWeed: false,
     fertilizeCrop: false,
@@ -20,22 +19,28 @@ export class ProductInformationContentComponent implements OnInit{
     makeCropLine: false,
     makeCropHole: false,
     name: '',
-    productId: 0
+    productId: 0,
   };
 
-  constructor(private route: ActivatedRoute, private productsService: ProductsService, private dataService: CropdataService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private productsService: ProductsService,
+    private dataService: CropdataService
+  ) {}
   ngOnInit(): void {
-    this.loadData()
+    this.loadData();
   }
 
   loadData() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       const productId = +params['id'];
-        this.productsService.getById(productId).subscribe((productResponse: any) => {
-          this.product=productResponse;
-          this.form.productId=productId;
+      this.productsService
+        .getById(productId)
+        .subscribe((productResponse: any) => {
+          this.product = productResponse;
+          this.form.productId = productId;
         });
-      });
+    });
   }
 
   saveData() {
