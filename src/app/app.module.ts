@@ -85,6 +85,7 @@ import {RateDialogContentComponent} from "./shopping/components/rate-dialog-cont
 import {MatSortModule} from "@angular/material/sort";
 import {authInterceptorProviders} from "./authentication/helpers/AuthInterceptor";
 import { ContactDialogComponent } from './authentication/components/contact-dialog/contact-dialog.component';
+import { CropDetailsComponent } from './management/components/crop-details/crop-details.component';
 
 @NgModule({
   declarations: [
@@ -130,6 +131,7 @@ import { ContactDialogComponent } from './authentication/components/contact-dial
     OrderDialogContentComponent,
     RateDialogContentComponent,
     ContactDialogComponent,
+    CropDetailsComponent,
   ],
   imports: [
     BrowserModule,

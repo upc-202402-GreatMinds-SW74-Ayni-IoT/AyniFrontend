@@ -5,24 +5,27 @@
       "username": "Juan",
       "email": "Juan@gmail.com",
       "password": "Juan123",
-      "rol": "farmer",
-      "photo": "https://media.istockphoto.com/id/1199175531/photo/outdoor-portrait-of-smiling-spanish-man-in-mid-20s.jpg?s=170667a&w=0&k=20&c=6mDr4Fkq-ECwldusAzBRG21qenqKvtqLVXCEwHguGGY="
+      "roles": [{ "role": "ROLE_FARMER" }],
+      "photo": "https://media.istockphoto.com/id/1199175531/photo/outdoor-portrait-of-smiling-spanish-man-in-mid-20s.jpg?s=170667a&w=0&k=20&c=6mDr4Fkq-ECwldusAzBRG21qenqKvtqLVXCEwHguGGY=",
+      "token": "adsfasduf9y.23423ferg.324234234"
     },
     {
       "id": 2,
       "username": "Jose",
       "email": "Jose@gmail.com",
       "password": "Jose123",
-      "rol": "merchant",
-      "photo": "https://img.freepik.com/fotos-premium/chico-adolescente-atractivo-parque_58409-13244.jpg?w=2000"
+      "roles": [{ "role": "ROLE_MERCHANT" }],
+      "photo": "https://img.freepik.com/fotos-premium/chico-adolescente-atractivo-parque_58409-13244.jpg?w=2000",
+      "token": "adsfasduf9y.23423ferg.324234234"
     },
     {
       "id": 3,
       "username": "Hana",
       "email": "Hana@gmail.com",
       "password": "Hana123",
-      "rol": "merchant",
-      "photo": "https://img.freepik.com/foto-gratis/mujer-hermosa-joven-mirando-camara-chica-moda-verano-casual-camiseta-blanca-pantalones-cortos-hembra-positiva-muestra-emociones-faciales-modelo-divertido-aislado-amarillo_158538-15796.jpg"
+      "roles": [{ "role": "ROLE_MERCHANT" }],
+      "photo": "https://img.freepik.com/foto-gratis/mujer-hermosa-joven-mirando-camara-chica-moda-verano-casual-camiseta-blanca-pantalones-cortos-hembra-positiva-muestra-emociones-faciales-modelo-divertido-aislado-amarillo_158538-15796.jpg",
+      "token": "adsfasduf9y.23423ferg.324234234"
     }
   ],
   "products": [
@@ -30,37 +33,40 @@
       "id": 1,
       "name": "Papas",
       "description": "Papas haradas durante bastante tiempo",
-      "distance": "1 metro",
-      "depth": "2 metros",
-      "weather": "Seco",
-      "groundType": "Arenoso",
-      "season": "Verano",
+      "recommendedCultivationDistance": "1 metro",
+      "recommendedCultivationDepth": "2 metros",
+      "recommendedGrowingClimate": "Seco",
+      "recommendedSoilType": "Arenoso",
+      "recommendedGrowingSeason": "Verano",
       "unitPrice": 1.5,
-      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5"
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5",
+      "userId": 1
     },
     {
       "id": 2,
       "name": "Cerezos",
       "description": "Cereza recontra roja",
-      "distance": "1 metro",
-      "depth": "2 metros",
-      "weather": "Seco",
-      "groundType": "Arenoso",
-      "season": "Verano",
+      "recommendedCultivationDistance": "1 metro",
+      "recommendedCultivationDepth": "2 metros",
+      "recommendedGrowingClimate": "Seco",
+      "recommendedSoilType": "Arenoso",
+      "recommendedGrowingSeason": "Verano",
       "unitPrice": 2.5,
-      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/f481402c-de81-4d95-a694-82fab273adfa"
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/f481402c-de81-4d95-a694-82fab273adfa",
+      "userId": 1
     },
     {
       "id": 3,
       "name": "Arroz",
       "description": "Arroz bien plantado",
-      "distance": "1 metro",
-      "depth": "2 metros",
-      "weather": "Seco",
-      "groundType": "Arenoso",
-      "season": "Verano",
+      "recommendedCultivationDistance": "1 metro",
+      "recommendedCultivationDepth": "2 metros",
+      "recommendedGrowingClimate": "Seco",
+      "recommendedSoilType": "Arenoso",
+      "recommendedGrowingSeason": "Verano",
       "unitPrice": 1.5,
-      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/19f2c725-e39b-4319-84c3-efed243898dd"
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/19f2c725-e39b-4319-84c3-efed243898dd",
+      "userId": 1
     }
   ],
   "activities": [
@@ -123,14 +129,43 @@
   ],
   "crops": [
     {
-      "undergrowth": true,
-      "fertilize": false,
-      "oxygenate": true,
-      "lines": false,
-      "holes": true,
-      "watered": "3",
-      "pestcleaning": "5",
-      "id": 1
+      "id": 1,
+      "pickUpWeed": true,
+      "fertilizeCrop": false,
+      "oxygenateCrop": true,
+      "makeCropLine": true,
+      "makeCropHole": false,
+      "wateringDays": 3,
+      "pestCleanupDays": 7,
+      "name": "Potato Crop",
+      "productId": 101,
+      "userId": 501
+    },
+    {
+      "id": 2,
+      "pickUpWeed": false,
+      "fertilizeCrop": true,
+      "oxygenateCrop": false,
+      "makeCropLine": false,
+      "makeCropHole": true,
+      "wateringDays": 5,
+      "pestCleanupDays": 10,
+      "name": "Cherry Crop",
+      "productId": 102,
+      "userId": 502
+    },
+    {
+      "id": 3,
+      "pickUpWeed": true,
+      "fertilizeCrop": true,
+      "oxygenateCrop": true,
+      "makeCropLine": false,
+      "makeCropHole": true,
+      "wateringDays": 4,
+      "pestCleanupDays": 8,
+      "name": "Rice Crop",
+      "productId": 103,
+      "userId": 503
     }
   ],
   "transactions": [
@@ -241,7 +276,8 @@
       "description": "Papas haradas durante bastante tiempo",
       "unitPrice": 1.5,
       "quantity": 20,
-      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5"
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5",
+      "userId": 1
     },
     {
       "id": 2,
@@ -249,7 +285,8 @@
       "description": "Ricos camotes",
       "unitPrice": "1.50",
       "quantity": "30",
-      "imageUrl": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQTKPfhD7KjTxh3WxlIC7zzKlnmTR1CaNt29U9M76o8WdjJ77UZvo1fKVSciIiuRybj"
+      "imageUrl": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQTKPfhD7KjTxh3WxlIC7zzKlnmTR1CaNt29U9M76o8WdjJ77UZvo1fKVSciIiuRybj",
+      "userId": 1
     }
   ]
 }

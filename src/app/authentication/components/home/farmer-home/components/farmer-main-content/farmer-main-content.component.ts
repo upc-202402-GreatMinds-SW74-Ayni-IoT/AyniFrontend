@@ -4,6 +4,7 @@ import { ProductsService } from '../../../../../../management/services/products.
 import { Product } from '../../../../../../management/model/product';
 import { CropsService } from '../../../../../../management/services/crops.service';
 import { Crop } from '../../../../../../management/model/crop';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-farmer-main-content',
@@ -18,6 +19,7 @@ export class FarmerMainContentComponent {
   displayedColumns: string[] = ['name', 'watered', 'pestCleaning'];
   dataSource!: MatTableDataSource<any>;
   constructor(
+    private router: Router,
     private cropsService: CropsService,
     private productsService: ProductsService
   ) {
@@ -28,5 +30,9 @@ export class FarmerMainContentComponent {
       this.crops = response;
       this.dataSource = new MatTableDataSource(this.crops);
     });
+  }
+
+  navigateToCropDetails(productId: number) {
+    this.router.navigate(['/crops', productId]);
   }
 }
