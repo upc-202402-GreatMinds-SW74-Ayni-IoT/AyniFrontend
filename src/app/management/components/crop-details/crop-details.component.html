@@ -1,1 +1,65 @@
-<p>crop-details works!</p>
+<section>
+  <header>
+    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+
+    <h1>{{ crop?.name }} Details</h1>
+  </header>
+
+  <div class="container">
+    <mat-card class="crop-details-card" style="width: 500px">
+      <mat-card-header>
+        <img class="crop-image" [src]="crop?.imageUrl" alt="Crop Image" />
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>
+            <strong>Fertilize Crop: </strong>
+            <span>{{ crop?.fertilizeCrop ? "Yes" : "No" }}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Oxygenate Crop: </strong>
+            <span>{{ crop?.oxygenateCrop ? "Yes" : "No" }}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Make Crop Line: </strong>
+            <span>{{ crop?.makeCropLine ? "Yes" : "No" }}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Make Crop Hole: </strong>
+            <span>{{ crop?.makeCropHole ? "Yes" : "No" }}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Watering Days: </strong>
+            <span>{{ crop?.wateringDays }} days</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Pest Cleanup Days: </strong>
+            <span>{{ crop?.pestCleanupDays }} days</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Temperature, Oxygenation, and Hydration Chart -->
+    <mat-card
+      style="
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      "
+    >
+      <div class="chart">
+        <canvas
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+        >
+        </canvas>
+      </div>
+    </mat-card>
+  </div>
+</section>

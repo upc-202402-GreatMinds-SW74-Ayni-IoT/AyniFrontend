@@ -10,6 +10,7 @@ export class Crop {
   name: string;
   productId: number;
   userId: number;
+  imageUrl: string;
 
   constructor() {
     this.id = 0;
@@ -23,5 +24,6 @@ export class Crop {
     this.name = '';
     this.productId = 0;
     this.userId = 0;
+    this.imageUrl = '';
   }
 }
