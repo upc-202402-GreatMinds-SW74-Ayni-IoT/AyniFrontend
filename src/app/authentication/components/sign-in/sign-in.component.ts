@@ -58,29 +58,29 @@ export class SignInComponent {
       };
 
       // this.router.navigate(['farmer-home']);
-      this.router.navigate(['merchant-home']);
+      // this.router.navigate(['merchant-home']);
 
-      // this.usersService
-      //   .signin(credentials)
-      //   .pipe()
-      //   .subscribe({
-      //     next: (response) => {
-      //       console.log('Signin successful:', response);
-      //       this.tokenStorage.saveToken(response.token);
-      //       this.tokenStorage.saveUser(response);
+      this.usersService
+        .signin(credentials)
+        .pipe()
+        .subscribe({
+          next: (response) => {
+            console.log('Signin successful:', response);
+            this.tokenStorage.saveToken(response.token);
+            this.tokenStorage.saveUser(response);
 
-      //       this.isLoginFailed = false;
-      //       this.isLoggedIn = true;
-      //       this.roles = this.tokenStorage.getUser().roles;
+            this.isLoginFailed = false;
+            this.isLoggedIn = true;
+            this.roles = this.tokenStorage.getUser().roles;
 
-      //       if (this.tokenStorage.getUser().roles[0].role === 'ROLE_FARMER')
-      //         this.router.navigate(['farmer-home']);
-      //       else this.router.navigate(['merchant-home']);
-      //     },
-      //     error: (error) => {
-      //       console.error('Signin failed:', error);
-      //     },
-      //   });
+            if (this.tokenStorage.getUser().roles[0].role === 'ROLE_FARMER')
+              this.router.navigate(['farmer-home']);
+            else this.router.navigate(['merchant-home']);
+          },
+          error: (error) => {
+            console.error('Signin failed:', error);
+          },
+        });
     }
   }
 
