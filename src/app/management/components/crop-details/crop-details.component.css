@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  gap: 16px;
+}
+
+section {
+  margin: 2rem;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.chart {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.crop-image {
+  width: 100%;
+}

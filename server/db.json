@@ -138,6 +138,7 @@
       "wateringDays": 3,
       "pestCleanupDays": 7,
       "name": "Potato Crop",
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/ce40fc4a-b351-420d-a06e-14304018bed5",
       "productId": 101,
       "userId": 501
     },
@@ -152,7 +153,8 @@
       "pestCleanupDays": 10,
       "name": "Cherry Crop",
       "productId": 102,
-      "userId": 502
+      "userId": 502,
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/f481402c-de81-4d95-a694-82fab273adfa"
     },
     {
       "id": 3,
@@ -165,7 +167,8 @@
       "pestCleanupDays": 8,
       "name": "Rice Crop",
       "productId": 103,
-      "userId": 503
+      "userId": 503,
+      "imageUrl": "https://github.com/upc-pre-202302-GreatMinds-SW51/Informe-Final_OpenSource/assets/104078975/19f2c725-e39b-4319-84c3-efed243898dd"
     }
   ],
   "transactions": [
