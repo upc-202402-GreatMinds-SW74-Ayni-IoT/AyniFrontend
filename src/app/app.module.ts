@@ -75,6 +75,7 @@ import { authInterceptorProviders } from './authentication/helpers/AuthIntercept
 import { ContactDialogComponent } from './authentication/components/contact-dialog/contact-dialog.component';
 import { CropDetailsComponent } from './management/components/crop-details/crop-details.component';
 import { NgChartsModule } from 'ng2-charts';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +122,7 @@ import { NgChartsModule } from 'ng2-charts';
     RateDialogContentComponent,
     ContactDialogComponent,
     CropDetailsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
