@@ -1,23 +1,45 @@
 <mat-toolbar class="nav">
   <span class="nav-welcome">
-    <span mat-card-image><mat-icon>account_circle</mat-icon></span>
-    Welcome, {{ user.username }}
-    <button (click)="onLogOut()" mat-button>Log Out</button>
+    <!-- <span mat-card-image><mat-icon>account_circle</mat-icon></span>
+    Welcome, {{ user.username }} -->
+
+    <a routerLink="/farmer-home">
+      <div class="logo">
+        <img src="../../../../assets/logo.png" alt="Ayni logo" />
+
+        <span>Ayni</span>
+      </div>
+    </a>
   </span>
   <span class="spacer"></span>
 
   <ng-container *ngIf="isLargeScreen">
-    <button *ngFor="let route of routesFarmer"
-            [routerLink]="route.to"
-            mat-button>
+    <button
+      *ngFor="let route of routesFarmer"
+      [routerLink]="route.to"
+      mat-button
+    >
       {{ route.label }}
     </button>
   </ng-container>
-  <button mat-button [matMenuTriggerFor]="userMenu" *ngIf="!isLargeScreen"><mat-icon>menu</mat-icon></button>
+  <button mat-button [matMenuTriggerFor]="userMenu" *ngIf="!isLargeScreen">
+    <mat-icon>menu</mat-icon>
+  </button>
   <mat-menu #userMenu="matMenu">
-    <button *ngFor="let route of routesFarmer" [routerLink]="route.to" mat-menu-item>
+    <button
+      *ngFor="let route of routesFarmer"
+      [routerLink]="route.to"
+      mat-menu-item
+    >
       {{ route.label }}
     </button>
   </mat-menu>
+
+  <mat-select value="en" class="language-picker">
+    <mat-option value="en"> EN </mat-option>
+    <mat-option value="es"> ES </mat-option>
+  </mat-select>
+
+  <button class="back-button" (click)="onLogOut()" mat-button>Log Out</button>
 </mat-toolbar>
 <router-outlet></router-outlet>
