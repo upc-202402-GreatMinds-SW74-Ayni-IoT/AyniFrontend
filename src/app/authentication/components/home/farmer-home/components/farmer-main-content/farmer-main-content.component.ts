@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./farmer-main-content.component.css'],
 })
 export class FarmerMainContentComponent {
-  products!: Product[];
-  crops!: Crop[];
+  products: Product[] = [];
+  crops: Crop[] = [];
 
   // Table
   displayedColumns: string[] = ['name', 'watered', 'pestCleaning'];
@@ -30,6 +30,12 @@ export class FarmerMainContentComponent {
       this.crops = response;
       this.dataSource = new MatTableDataSource(this.crops);
     });
+  }
+
+  getFilteredProducts() {
+    return this.products.filter((product) =>
+      this.crops.map((crop) => crop.productId).includes(product.id)
+    );
   }
 
   navigateToCropDetails(productId: number) {
