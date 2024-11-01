@@ -1,42 +1,46 @@
 <app-farmer-navigation></app-farmer-navigation>
 <div class="content">
   <div class="product-information">
-    <img class="img" src="{{product.imageUrl}}" alt="">
+    <img class="img" src="{{ product.imageUrl }}" alt="" />
     <div class="product-details">
       <h1 class="product-title">{{ product.name }}</h1>
-      <h3>
-        Plant Details
-      </h3>
+      <h3 style="font-weight: 600">Plant Details</h3>
       <p>
-        Recommended separation distance: {{ product.recommendedCultivationDistance }} meters<br>
-        Recommended cultivation depth: {{ product.recommendedCultivationDepth }} meters<br>
-        Weather: {{ product.recommendedGrowingClimate }}<br>
-        Recommended soil type: {{ product.recommendedSoilType }}<br>
-        Season: {{ product.recommendedGrowingSeason }}<br>
+        <strong>Recommended separation distance:</strong>
+        {{ product.recommendedCultivationDistance }}<br />
+        <strong>Recommended cultivation depth:</strong>
+        {{ product.recommendedCultivationDepth }}<br />
+        <strong>Weather:</strong> {{ product.recommendedGrowingClimate }}<br />
+        <strong>Recommended soil type:</strong> {{ product.recommendedSoilType
+        }}<br />
+        <strong>Season:</strong> {{ product.recommendedGrowingSeason }}<br />
       </p>
-      <h3>
-        Cultivation Plan
-      </h3>
+      <h3 style="font-weight: 600">Cultivation Plan</h3>
       <p>
-        Phase 1 --> Finalized <br>
-        Phase 2 --> Finalized <br>
-        Phase 3 --> In progress <br>
-        Phase 4 --> Pendient <br>
-        Phase 5 --> Pendient <br>
+        Phase 1 --> Finalized <br />
+        Phase 2 --> Finalized <br />
+        Phase 3 --> In progress <br />
+        Phase 4 --> Pendient <br />
+        Phase 5 --> Pendient <br />
       </p>
-      <h3>
-        Inputs used
-      </h3>
+      <h3 style="font-weight: 600">Inputs used</h3>
       <p>
-        Fertilizer: Casero <br>
-        Pesticided: Canela con romero <br>
-        Clothing: Traje de tela hidrorrepelente <br>
-        Packaging: 10 cajas de madera <br>
+        <strong>Fertilizer:</strong> Casero <br />
+        <strong>Pesticided:</strong> Canela con romero <br />
+        <strong>Clothing:</strong> Traje de tela hidrorrepelente <br />
+        <strong>Packaging:</strong> 10 cajas de madera <br />
       </p>
     </div>
-
   </div>
   <div class="buttons">
-    <button mat-raised-button [routerLink]="crops" class="button" (click)="saveData()" color="primary">CULTIVATE</button>
+    <button
+      mat-raised-button
+      [routerLink]="crops"
+      class="button"
+      (click)="saveData()"
+      color="primary"
+    >
+      CULTIVATE
+    </button>
   </div>
 </div>

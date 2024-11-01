@@ -12,6 +12,7 @@
   >
     <mat-grid-tile *ngFor="let product of pagedList" class="grid-title">
       <app-product-card-content
+        style="border-radius: 8px"
         [product]="product"
         (click)="navigateToProductDetails(product.id)"
       ></app-product-card-content>

@@ -18,10 +18,11 @@
   color: white;
 }
 .product-details {
-  background-color: #212121;
+  background-color: #212121a1;
   color: white;
   padding: 1.5rem;
   width: 100%;
+  border-radius: 8px;
 }
 .img {
   height: 200px;
@@ -36,7 +37,7 @@
 }
 
 .mat-mdc-raised-button.mat-primary {
-  --mdc-protected-button-container-color: #3EAF2C;
+  --mdc-protected-button-container-color: #3eaf2c;
   --mdc-protected-button-label-text-color: #fff;
- padding: 1.5rem;
+  padding: 1.5rem;
 }

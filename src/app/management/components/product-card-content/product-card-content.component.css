@@ -7,11 +7,12 @@
   row-gap: 1rem;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
 }
 
 .card-title {
   color: white;
-  background-color: #3EAF2C;
+  background-color: #3eaf2c;
   padding: 0.5rem;
   display: flex;
   flex-direction: row;
@@ -20,5 +21,6 @@
 }
 
 .example-header-image {
-  width: 50%;
+  width: 80%;
+  object-fit: cover;
 }
