@@ -1,5 +1,12 @@
 .page-background {
-  background: linear-gradient(to bottom, #2AAF87, #48D4AA, #ABEDD9, #D0F3CB, white);
+  background: linear-gradient(
+    to bottom,
+    #2aaf87,
+    #48d4aa,
+    #abedd9,
+    #d0f3cb,
+    white
+  );
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -10,7 +17,7 @@
 
 .container {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 80%;
+  width: 55vw;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);

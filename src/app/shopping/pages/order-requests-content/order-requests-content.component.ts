@@ -52,6 +52,7 @@ export class OrderRequestsContentComponent implements OnInit {
         (order: any) =>
           order.acceptedBy === userId && order.status === 'pending'
       );
+
       this.pageNumbers = Array.from(
         { length: Math.ceil(this.orders.length / this.pageSize) },
         (_, index) => index
