@@ -1,18 +1,25 @@
 <app-merchant-navigation></app-merchant-navigation>
 <div class="content">
   <div class="product-information">
-    <img class="img" src="{{sale.imageUrl}}" alt="">
+    <img class="img" src="{{ sale.imageUrl }}" alt="" />
     <div class="product-details">
       <h1 class="product-title">{{ sale.name }}</h1>
       <h3>Sale details:</h3>
       <p>
-        Description: {{ sale.description }}<br>
-        Unit Price: S/. {{ sale.unitPrice }}<br>
-        Quantity: {{ sale.quantity }} Kg<br>
+        <strong>Description: </strong> {{ sale.description }}<br />
+        <strong>Unit Price: </strong> S/. {{ sale.unitPrice }}<br />
+        <strong>Quantity: </strong>{{ sale.quantity }} Kg<br />
       </p>
     </div>
   </div>
   <div class="buttons">
-    <button mat-raised-button (click)="redirectToNewSale()" class="button" color="primary">BUY PRODUCT</button>
+    <button
+      mat-raised-button
+      (click)="redirectToNewSale()"
+      class="button"
+      color="primary"
+    >
+      BUY PRODUCT
+    </button>
   </div>
 </div>
