@@ -22,15 +22,15 @@ export class UsersService extends BaseService<User> {
   }
 
   signin(credentials: { password: any; username: any }): Observable<any> {
-    // return this.http.post(`${this.apiUrl}/signin`, credentials);
-    return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
-      map((response) => {
-        const matchingUser = response.find(
-          (user) => user.username === credentials.username
-        );
+    return this.http.post(`${this.apiUrl}/signin`, credentials);
+    // return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
+    //   map((response) => {
+    //     const matchingUser = response.find(
+    //       (user) => user.username === credentials.username
+    //     );
 
-        return matchingUser;
-      })
-    );
+    //     return matchingUser;
+    //   })
+    // );
   }
 }

@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule } from '@angular/material/stepper';
 import { CropsStepperContentComponent } from './management/components/stepper-content/stepper-content.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NgOptimizedImage } from '@angular/common';
+import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CropsStep1CardContentComponent } from './management/components/step1-card-content/step1-card-content.component';
@@ -158,7 +158,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     MatSortModule,
     NgChartsModule,
   ],
-  providers: [OrdersService, authInterceptorProviders],
+  providers: [OrdersService, authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

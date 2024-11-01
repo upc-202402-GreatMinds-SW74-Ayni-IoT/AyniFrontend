@@ -5,6 +5,7 @@ import { OrdersService } from '../../../../../../shopping/services/orders.servic
 import { Sale } from '../../../../../../shopping/model/sale';
 import { SalesService } from '../../../../../../shopping/services/sales.service';
 import { TokenStorageService } from '../../../../../services/token-storage.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-merchant-main-content',
@@ -21,7 +22,8 @@ export class MerchantMainContentComponent {
   constructor(
     private ordersService: OrdersService,
     private salesServices: SalesService,
-    private tokenStorage: TokenStorageService
+    private tokenStorage: TokenStorageService,
+    private datePipe: DatePipe
   ) {
     this.loadData(tokenStorage.getUser()?.id);
   }
@@ -43,6 +45,10 @@ export class MerchantMainContentComponent {
 
       console.log('Token JWT:', this.tokenStorage.getToken());
     });
+  }
+
+  formatDate(date: number) {
+    return this.datePipe.transform(new Date(date), 'dd/MM/yyyy');
   }
 
   getProduct(saleId: number): any {

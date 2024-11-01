@@ -1,9 +1,9 @@
-
-.container{
+.container {
   max-width: 1400px;
   margin: 0 auto;
+  padding-bottom: 24px;
 }
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(2, auto);
@@ -40,42 +40,42 @@
   grid-area: seccion4;
 }
 
-.center{
+.center {
   text-align: center;
 }
 
-.carousel-display{
+.carousel-display {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 30px;
 }
-.carousel-display-button{
+.carousel-display-button {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
 @media (max-width: 1024px) {
-  .carousel-display{
+  .carousel-display {
     flex-direction: column;
   }
 }
 @media (max-width: 768px) {
-  .grid-container{
+  .grid-container {
     display: flex;
     flex-direction: column;
   }
-  .itemCalendar{
+  .itemCalendar {
     order: 2;
   }
-  .itemLogo{
+  .itemLogo {
     order: 1;
   }
-  .itemCarousel{
+  .itemCarousel {
     order: 3;
   }
-  .itemAdvertising{
+  .itemAdvertising {
     order: 4;
   }
 }
