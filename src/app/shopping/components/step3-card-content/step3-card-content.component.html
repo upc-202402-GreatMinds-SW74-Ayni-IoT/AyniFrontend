@@ -4,16 +4,22 @@
   </mat-card-header>
 
   <mat-card-content>
-    <p>Details:</p>
-    <p>{{formData.description}}</p>
-    <p>Payment method: {{formData.paymentMethod}}</p>
-
+    <strong>Details:</strong>
+    <p>{{ formData.description }}</p>
+    <p>Payment method: {{ formData.paymentMethod }}</p>
   </mat-card-content>
 
-  <mat-card-footer>
+  <mat-card-footer style="padding: 1rem">
     <mat-card-footer>
       <button mat-button matStepperPrevious>Back</button>
-      <button mat-raised-button color="primary" [routerLink]="sales" (click)="onSubmit()">Complete purchase</button>
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="sales"
+        (click)="onSubmit()"
+      >
+        Complete purchase
+      </button>
     </mat-card-footer>
   </mat-card-footer>
 </mat-card>
