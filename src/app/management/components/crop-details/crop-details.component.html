@@ -1,16 +1,15 @@
 <app-farmer-navigation />
 
 <section>
-  <header>
-    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
-
-    <h1>{{ crop?.name }} Details</h1>
-  </header>
+  <header></header>
 
   <div class="container">
     <mat-card class="crop-details-card" style="width: 500px">
-      <mat-card-header>
-        <img class="crop-image" [src]="crop?.imageUrl" alt="Crop Image" />
+      <mat-card-header style="display: flex; gap: 8px; align-items: center">
+        <button mat-icon-button (click)="goBack()">
+          <mat-icon aria-label="Volver">arrow_back</mat-icon>
+        </button>
+        <h1 style="margin: 0">{{ crop?.name }} Details</h1>
       </mat-card-header>
 
       <mat-card-content>
