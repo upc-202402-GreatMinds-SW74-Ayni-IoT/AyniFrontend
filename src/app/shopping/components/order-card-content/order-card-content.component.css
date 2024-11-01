@@ -13,7 +13,7 @@ mat-card-content {
 :host mat-card-header {
   margin: 0;
   padding: 3px 0 0 3px;
-  border:0;
+  border: 0;
 }
 
 .buttons {
@@ -33,11 +33,15 @@ mat-card-content {
 }
 
 .product-photo {
-  width: 80%;
   object-fit: cover;
 }
 
-:host .button-color{
+:host .button-color {
   color: white;
-  background-color: #3EAF2C;
+  background-color: #3eaf2c;
+}
+
+.button-color {
+  color: white;
+  background-color: #3eaf2c !important;
 }
