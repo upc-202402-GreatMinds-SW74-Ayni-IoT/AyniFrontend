@@ -7,6 +7,10 @@ export class Crop {
   makeCropHole: boolean;
   wateringDays: number;
   pestCleanupDays: number;
+  recommendedTemperature: number;
+  recommendedHumidity: number;
+  recommendedOxygen: number;
+  recommendedWaterLevel: number;
   name: string;
   productId: number;
   userId: number;
@@ -21,6 +25,10 @@ export class Crop {
     this.makeCropHole = false;
     this.wateringDays = 0;
     this.pestCleanupDays = 0;
+    this.recommendedTemperature = 0;
+    this.recommendedHumidity = 0;
+    this.recommendedOxygen = 0;
+    this.recommendedWaterLevel = 0;
     this.name = '';
     this.productId = 0;
     this.userId = 0;

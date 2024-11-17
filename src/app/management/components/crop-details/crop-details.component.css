@@ -22,3 +22,14 @@ section {
 .crop-image {
   width: 100%;
 }
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 0 2rem;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+}

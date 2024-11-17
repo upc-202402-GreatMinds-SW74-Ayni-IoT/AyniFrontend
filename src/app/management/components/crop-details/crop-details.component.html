@@ -38,6 +38,22 @@
             <strong>Pest Cleanup Days: </strong>
             <span>{{ crop?.pestCleanupDays }} days</span>
           </mat-list-item>
+          <mat-list-item>
+            <strong>Recommended Temperature: </strong>
+            <span>{{ crop?.recommendedTemperature }} °C</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Recommended Humidity: </strong>
+            <span>{{ crop?.recommendedHumidity }} %</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Recommended Oxygen: </strong>
+            <span>{{ crop?.recommendedOxygen }} %</span>
+          </mat-list-item>
+          <mat-list-item>
+            <strong>Recommended Water Level: </strong>
+            <span>{{ crop?.recommendedWaterLevel }} cm</span>
+          </mat-list-item>
         </mat-list>
       </mat-card-content>
     </mat-card>
@@ -51,15 +67,46 @@
         padding: 2rem;
       "
     >
-      <div class="chart">
-        <canvas
-          baseChart
-          [datasets]="barChartData"
-          [labels]="barChartLabels"
-          [options]="barChartOptions"
-          [legend]="barChartLegend"
-        >
-        </canvas>
+      <div class="charts-container">
+        <div class="chart">
+          <h3>Temperature</h3>
+          <canvas
+            baseChart
+            [data]="temperatureChart"
+            [labels]="temperatureChart.labels"
+            [type]="lineChartType"
+          ></canvas>
+        </div>
+
+        <div class="chart">
+          <h3>Hydration</h3>
+          <canvas
+            baseChart
+            [data]="hydrationChart"
+            [labels]="hydrationChart.labels"
+            [type]="lineChartType"
+          ></canvas>
+        </div>
+
+        <div class="chart">
+          <h3>Oxygenation</h3>
+          <canvas
+            baseChart
+            [data]="oxygenationChart"
+            [labels]="oxygenationChart.labels"
+            [type]="lineChartType"
+          ></canvas>
+        </div>
+
+        <div class="chart">
+          <h3>Water Level</h3>
+          <canvas
+            baseChart
+            [data]="waterLevelChart"
+            [labels]="waterLevelChart.labels"
+            [type]="lineChartType"
+          ></canvas>
+        </div>
       </div>
     </mat-card>
   </div>
