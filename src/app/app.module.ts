@@ -76,6 +76,7 @@ import { ContactDialogComponent } from './authentication/components/contact-dial
 import { CropDetailsComponent } from './management/components/crop-details/crop-details.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { MembershipComponent } from './membership/membership.component';
 
 @NgModule({
   declarations: [
@@ -123,6 +124,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     ContactDialogComponent,
     CropDetailsComponent,
     FooterComponent,
+    MembershipComponent,
   ],
   imports: [
     BrowserModule,

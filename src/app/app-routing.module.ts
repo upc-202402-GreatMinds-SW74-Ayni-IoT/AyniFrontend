@@ -19,9 +19,11 @@ import { RatesGalleryContentComponent } from './shopping/pages/rates-gallery-con
 import { SalesGalleryContentComponent } from './shopping/pages/sales-gallery-content/sales-gallery-content.component';
 import { SaleInformationContentComponent } from './shopping/pages/sale-information-content/sale-information-content.component';
 import { OrderRequestsContentComponent } from './shopping/pages/order-requests-content/order-requests-content.component';
+import { MembershipComponent } from 'src/app/membership/membership.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'signin', pathMatch: 'full' },
+  // { path: '', redirectTo: 'signin', pathMatch: 'full' },
+  { path: '', component: MembershipComponent },
   { path: 'signin', component: SignInComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'select-rol', component: SelectRolComponent },
