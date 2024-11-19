@@ -33,7 +33,7 @@ export class OrderInformationContentComponent {
   ngOnInit(): void {
     this.loadData();
   }
-
+//metodo de obtencion de datos
   loadData() {
     this.route.params.subscribe((params) => {
       const purchaseId = +params['id'];

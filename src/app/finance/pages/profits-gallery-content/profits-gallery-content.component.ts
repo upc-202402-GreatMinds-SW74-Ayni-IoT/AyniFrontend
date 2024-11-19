@@ -5,6 +5,7 @@ import { NewTransactionDialogContentComponent } from '../../components/new-trans
 import { MatDialog } from '@angular/material/dialog';
 import { TokenStorageService } from '../../../authentication/services/token-storage.service';
 
+//nose usa
 @Component({
   selector: 'app-profits-gallery-content',
   templateUrl: './profits-gallery-content.component.html',

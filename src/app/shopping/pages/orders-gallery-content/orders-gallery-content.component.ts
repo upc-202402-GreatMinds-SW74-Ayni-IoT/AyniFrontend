@@ -34,6 +34,7 @@ export class OrdersGalleryContentComponent {
     this.loadData(this.tokenStorage.getUser().id);
   }
 
+  //metodo de obtencion de datos
   loadData(userId: number) {
     this.ordersService.getAll().subscribe((response: any) => {
       this.purchases = response.filter(
